@@ -1,0 +1,14 @@
+<span
+    *ngIf="diff !== undefined; else noDiff"
+    class="badge"
+    [class.bg-success]="diff > 0"
+    [class.bg-danger]="diff < 0"
+  >
+    diff = {{ diff | number: '1.0-2' }}
+    cosica = {{cosica}}
+  </span>
+  <ng-template #noDiff>
+    <span class="badge bg-secondary">
+      No difference
+    </span>
+  </ng-template>
